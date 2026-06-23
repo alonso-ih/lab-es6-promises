@@ -82,7 +82,6 @@ obtainInstruction("steak", 0)
   })
   .then((step6) => {
     addStep("steak", step6);
-    return obtainInstruction("steak", 7);
   })
   .then((step7) => {
     addStep("steak", step7);
@@ -99,7 +98,7 @@ async function makeBroccoli() {
       addStep("broccoli", instruction);
     }
 
-    addStep("broccoli", "Broccoli is ready!");
+    addStep("broccoli", "Brocoli is ready!");
     showFood("broccoli");
   } catch (error) {
     console.log(error);
@@ -124,6 +123,5 @@ Promise.all(brusselsSproutsPromises)
   .then((steps) => {
     steps.forEach((step) => addStep("brusselsSprouts", step));
     addStep("brusselsSprouts", "Brussels sprouts are ready!");
-    showFood("brusselsSprouts");
   })
   .catch((error) => console.log(error));
